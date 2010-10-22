@@ -1,0 +1,2159 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (82.3ms)[0m   [0mSELECT id FROM users WHERE id >= 900 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (20.6ms)[0m   [0;1mSELECT id FROM users WHERE id > 3845 ORDER BY id LIMIT 1000[0m
+  [4;35;1mSQL (40.7ms)[0m   [0mSELECT id FROM users WHERE id > 9753 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (42.4ms)[0m   [0;1mSELECT id FROM users WHERE id > 21561 ORDER BY id LIMIT 1000[0m
+  [4;35;1mSQL (75.1ms)[0m   [0mSELECT id FROM users WHERE id > 45155 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (45.3ms)[0m   [0;1mSELECT id FROM users WHERE id > 92353 ORDER BY id LIMIT 1000[0m
+  [4;35;1mSQL (50.4ms)[0m   [0mSELECT id FROM users WHERE id > 186727 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (36.3ms)[0m   [0;1mSELECT id FROM users WHERE id > 375463 ORDER BY id LIMIT 1000[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT id FROM users WHERE id > 752937 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (76.2ms)[0m   [0mSELECT id FROM users WHERE id >= 373457 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT id FROM users WHERE id > 748917 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (74.3ms)[0m   [0mSELECT id FROM users WHERE id >= 90313 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (45.4ms)[0m   [0;1mSELECT id FROM users WHERE id > 182669 ORDER BY id LIMIT 1000[0m
+  [4;35;1mSQL (49.9ms)[0m   [0mSELECT id FROM users WHERE id > 367363 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT id FROM users WHERE id > 736733 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'schema_changer_test.users' doesn't exist: SELECT id FROM users WHERE id >= 90313 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (143.7ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (56.3ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (100.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:23:58', '2010-10-22 03:23:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (50.5ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:24:07', '2010-10-22 03:24:07')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT id FROM users WHERE id >= 90313 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (47.1ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (101.5ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:24:16', '2010-10-22 03:24:16')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT id FROM users WHERE id >= 90313 ORDER BY id LIMIT 1000[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (46.8ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (152.2ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:24:32', '2010-10-22 03:24:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (56.3ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (93.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:25:21', '2010-10-22 03:25:21')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (55.6ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (95.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:25:47', '2010-10-22 03:25:47')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (47.2ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (87.3ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:26:11', '2010-10-22 03:26:11')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (55.4ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (96.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:26:39', '2010-10-22 03:26:39')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (55.5ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (89.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:27:08', '2010-10-22 03:27:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (46.8ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (85.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:28:32', '2010-10-22 03:28:32')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (50.4ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (96.5ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:29:05', '2010-10-22 03:29:05')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:29:06', '2010-10-22 03:29:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT id FROM users WHERE id > 35 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (48.6ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (148.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:29:51', '2010-10-22 03:29:51')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:29:52', '2010-10-22 03:29:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 17 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT id FROM users WHERE id > 27 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (55.3ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (88.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:31:34', '2010-10-22 03:31:34')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT id FROM users WHERE id > 17 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id > 27 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (48.3ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (82.3ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:31:54', '2010-10-22 03:31:54')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT id FROM users WHERE id > 17 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT id FROM users WHERE id > 27 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (57.6ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (96.5ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:32:07', '2010-10-22 03:32:07')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:32:08', '2010-10-22 03:32:08')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT id FROM users WHERE id > 17 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT id FROM users WHERE id > 27 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (47.9ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (91.3ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:32:35', '2010-10-22 03:32:35')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:32:35', '2010-10-22 03:32:35')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:32:35', '2010-10-22 03:32:35')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:32:35', '2010-10-22 03:32:35')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:32:35', '2010-10-22 03:32:35')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:32:35', '2010-10-22 03:32:35')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:32:36', '2010-10-22 03:32:36')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (48.3ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:32:43', '2010-10-22 03:32:43')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:32:44', '2010-10-22 03:32:44')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 17 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT id FROM users WHERE id > 27 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (48.0ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (107.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:33:06', '2010-10-22 03:33:06')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 17 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT id FROM users WHERE id > 27 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (49.9ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (100.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `updated_at` datetime, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_0', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_1', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_2', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_3', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_4', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_5', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_6', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_7', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_8', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_9', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_10', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_11', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_12', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_13', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_14', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_15', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_16', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_17', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_18', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_19', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_20', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_21', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_22', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_23', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_24', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_25', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_26', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_27', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_28', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_29', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_30', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_31', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_32', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_33', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES('name_34', '2010-10-22 03:33:27', '2010-10-22 03:33:27')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT id FROM users WHERE id >= 8 ORDER BY id LIMIT 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT id FROM users WHERE id > 17 ORDER BY id LIMIT 10[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT id FROM users WHERE id > 27 ORDER BY id LIMIT 10[0m

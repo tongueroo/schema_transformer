@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+# 1. create new table with schema
+# 2. batch copy data
+# 3. maintainenance page
+# 4. batch copy final data
+# 5. rename tables
+# 6. remove maintenance page
+
+# 1. create new table with schema
+CREATE TABLE article_revisions_new LIKE article_revisions;
+ALTER TABLE article_revisions_new 
+  ADD INDEX idx_slide_id (slide_id);
+
+
+# 2. batch copy data
+
+max = SELECT max(`article_revisions`.id) AS max_id FROM `article_revisions`;
+
+Article::Revision
+
+Article.find_in_batches(batch_size => 100 ) { |articles| articles.each { |a| ... } }
+
+Article::Revision.maximum
+Pager.new()
+
+insert into article_revisions_new (select * from )
+
+insert into article_revisions_new (
+	select id, title, body, article_id, number, note, editor_id, created_at, blurb, teaser, source, slide_id 
+	from article_revisions where id <= 0 LIMIT 10000
+);
+
+
+
+Article::Revision Load (170.7ms)   SELECT * FROM `article_revisions` WHERE (article_revisions.id >= 0) ORDER BY article_revisions.id ASC LIMIT 1000
+Article::Revision Load (78.8ms)   SELECT * FROM `article_revisions` WHERE (article_revisions.id > 1430719) ORDER BY article_revisions.id ASC LIMIT 1000
+Article::Revision Load (78.1ms)   SELECT * FROM `article_revisions` WHERE (article_revisions.id > 1431725) ORDER BY article_revisions.id ASC LIMIT 1000
+
+
+# 3. maintainenance page
+# 4. batch copy final data
+# 5. rename tables
+# 6. remove maintenance page

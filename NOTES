@@ -1,0 +1,10 @@
+1. create new table with schema
+2. batch copy data
+3. maintainenance page
+4. batch copy final data
+5. rename tables
+6. remove maintenance page
+
+
+
+will need some logic to handle different number of columns: insert ... select with 2 different table schemas.  the new columns will be NULL values. 

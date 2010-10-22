@@ -1,0 +1,33 @@
+# beta
+#common: &common
+#  database: bleacherreport_staging
+#  adapter: mysql
+#  username: deploy
+#  password: sOqjaxGVmI
+#  host: 127.0.0.1
+#  port: 3307
+
+# production
+#common: &common
+#  database: bleacherreport_production
+#  adapter: mysql
+#  username: deploy
+#  password: 1Kyxa6cFsa
+#  host: 127.0.0.1
+#  port: 3307
+
+# local
+common: &common
+  adapter: mysql
+  username: root
+  password: 
+  host: localhost
+  database: br1
+  socket: /opt/local/var/run/mysql5/mysqld.sock
+
+development:
+  <<: *common
+
+test:
+  <<: *common
+  database: schema_changer_test
