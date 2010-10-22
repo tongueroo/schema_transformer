@@ -14,14 +14,17 @@ class SchemaChanger
     )
     @db.establish_connection
     @conn = ActiveRecord::Base.connection
+    
+    @batch_size = 10
   end
   
   def run
     ask "What is the name of the table you want to alter?"
-    @table = gets
-    @old_table = @table
-    @new_table = "#{@table}_new"
-    @model = Object.const_set(@old_table.classify, Class.new(ActiveRecord::Base))
+    @table = gets(:table)
+    @temp_table = "#{@table}_schema_temp"
+    @trash_table = "#{@table}_schema_trash"
+
+    @model = Object.const_set(@table.classify, Class.new(ActiveRecord::Base))
     ask "What do you want to do to the table? [add_index, add_column]"
     @action = parse_action
     ask "What is the modification to the table?"
@@ -36,35 +39,58 @@ class SchemaChanger
     STDIN.gets.strip
   end
   
-  def make_new
-    @sql[:create] = %{CREATE TABLE #{@new_table} LIKE #{@old_table}}
+  def create
+    @sql[:create] = %{CREATE TABLE #{@temp_table} LIKE #{@table}}
     if @action == 'add_column'
-      @sql[:mod] = %{ALTER TABLE #{@new_table} #{@mod}}
+      @sql[:mod] = %{ALTER TABLE #{@temp_table} #{@mod}}
     elsif @action == 'add_index'
-      @sql[:mod] = %{ALTER TABLE #{@new_table} #{@mod}}
+      @sql[:mod] = %{ALTER TABLE #{@temp_table} #{@mod}}
+    end
+    @conn.execute(@sql[:create])
+    @conn.execute(@sql[:mod])
+  end
+  
+  def sync
+    start = res = @conn.execute("SELECT max(id) AS max_id FROM `#{@temp_table}`")
+    start = res.fetch_row[0].to_i + 1 # nil case is okay: [nil][0].to_i => nil 
+    find_in_batches("users", :start => start, :batch_size => @batch_size) do |batch|
+      # puts "batch #{batch.inspect}"
+      lower = batch.first
+      upper = batch.last
+      new_column_default = ", 0 AS teaser_lock" # TODO: 
+      columns = @model.column_names.join(", ")
+      columns += new_column_default
+      @sql[:base_sync] = %Q{
+        INSERT INTO #{@temp_table} (
+          SELECT #{columns}
+        	FROM #{@table} WHERE id >= #{lower} AND id <= #{upper}
+        )
+      }
+      puts @sql[:base_sync]
     end
   end
   
-  def base_sync
-    lower = 1
-    upper = 10
-    new_column_default = ", 0 AS teaser_lock" # TODO: 
-    set_columns = @model.column_names.collect{|x| "new.#{x} = old.new#{x}" }.join(", ")
-    @sql[:base_sync] = %Q{
-      INSERT INTO articles_new (
-        SELECT
-      	  #{new_column_default}
-      	FROM #{@old_table} WHERE id >= #{lower} AND id <= #{upper}
-      )
-    }
-  end
-  
+  # TODO: updated_at if its available and use a real time vs some guess
   def final_sync
-    
+    sync
+    columns = @model.column_names.collect{|x| "#{@temp_table}.#{x} = #{@table}.#{x}" }.join(", ")
+    sql = %{
+      UPDATE #{@temp_table} INNER JOIN #{@table}
+        ON #{@temp_table}.id = #{@table}.id
+        SET #{columns}
+      WHERE #{@table}.updated_at >= '#{1.day.ago.strftime("%Y-%m-%d")}'
+    }
+    puts sql
   end
   
-  def rename
-    
+  def switch
+    final_sync
+    puts to_old   = %Q{RENAME TABLE #{@table} TO #{@trash_table}}
+    puts from_rename = %Q{RENAME TABLE #{@temp_table} TO #{@table}}
+  end
+  
+  def cleanup
+    puts cleanup = %Q{DROP TABLE #{@trash_table}}
   end
   
   # returns Array of record ids
@@ -102,12 +128,12 @@ private
   end
 
   def parse_action
-    action = gets.downcase
+    action = gets(:action).downcase
   end
   
   # raw: teaser_lock tinyint(1) DEFAULT '0'
   def parse_mod
-    column = STDIN.gets.strip
+    column = gets(:mod)
   end
 
 end
