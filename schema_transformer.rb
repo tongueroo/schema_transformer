@@ -1,16 +1,14 @@
 #!/usr/bin/env ruby
 
-# TODO: currently assumes we are always adding a column
-
 require 'rubygems'
 require 'active_wrapper'
 
-class SchemaChanger
+class SchemaTransformer
   def initialize
     @db, @log, @mail = ActiveWrapper.setup(
       :base => File.expand_path("..", __FILE__),
       :env => ENV['RAILS_ENV'] || 'development',
-      :log => "schema_changer"
+      :log => "schema_transformer"
     )
     @db.establish_connection
     @conn = ActiveRecord::Base.connection
@@ -18,19 +16,17 @@ class SchemaChanger
     @batch_size = 10
   end
   
-  def run
+  def gather_info
     ask "What is the name of the table you want to alter?"
     @table = gets(:table)
-    @temp_table = "#{@table}_schema_temp"
-    @trash_table = "#{@table}_schema_trash"
+    @temp_table = "#{@table}_st_temp"
+    @trash_table = "#{@table}_st_trash"
 
-    @model = Object.const_set(@table.classify, Class.new(ActiveRecord::Base))
-    ask "What do you want to do to the table? [add_index, add_column]"
-    @action = parse_action
+    @model = define_model(@table)
     ask "What is the modification to the table?"
     ask "Examples: ADD COLUMN teaser_lock tinyint(1) DEFAULT '0'"
     ask "          ADD INDEX slide_id (slide_id)"
-    @mod = parse_mod
+    @mod = gets(:mod)
     @sql = {}
   end
   
@@ -40,14 +36,14 @@ class SchemaChanger
   end
   
   def create
-    @sql[:create] = %{CREATE TABLE #{@temp_table} LIKE #{@table}}
-    if @action == 'add_column'
-      @sql[:mod] = %{ALTER TABLE #{@temp_table} #{@mod}}
-    elsif @action == 'add_index'
-      @sql[:mod] = %{ALTER TABLE #{@temp_table} #{@mod}}
-    end
-    @conn.execute(@sql[:create])
-    @conn.execute(@sql[:mod])
+    sql_create = %{CREATE TABLE #{@temp_table} LIKE #{@table}}
+    sql_mod = %{ALTER TABLE #{@temp_table} #{@mod}}
+    @conn.execute(sql_create)
+    @conn.execute(sql_mod)
+    @temp_model = define_model(@temp_table)
+    @model.reset_column_information
+    @temp_model.reset_column_information
+    # puts @temp_model
   end
   
   def sync
@@ -57,40 +53,64 @@ class SchemaChanger
       # puts "batch #{batch.inspect}"
       lower = batch.first
       upper = batch.last
-      new_column_default = ", 0 AS teaser_lock" # TODO: 
-      columns = @model.column_names.join(", ")
-      columns += new_column_default
-      @sql[:base_sync] = %Q{
+      
+      columns = insert_columns
+      sql = %Q{
         INSERT INTO #{@temp_table} (
           SELECT #{columns}
         	FROM #{@table} WHERE id >= #{lower} AND id <= #{upper}
         )
       }
-      puts @sql[:base_sync]
+      # puts sql
+      @conn.execute(sql)
     end
+  end
+  
+  def subset_columns
+    removed = @model.column_names - @temp_model.column_names
+    subset  = @model.column_names - removed
+  end
+  
+  def insert_columns
+    # existing subset
+    subset = subset_columns
+    
+    # added
+    added_temp = @temp_model.column_names - @model.column_names
+    added = @temp_model.columns.
+              select{|c| added_temp.include?(c.name) }.
+              collect{|c| "#{extract_default(c)} AS #{c.name}" }
+    
+    # combine both
+    columns = subset + added
+    sql = columns.join(", ")
   end
   
   # TODO: updated_at if its available and use a real time vs some guess
   def final_sync
     sync
-    columns = @model.column_names.collect{|x| "#{@temp_table}.#{x} = #{@table}.#{x}" }.join(", ")
+    columns = subset_columns.collect{|x| "#{@temp_table}.#{x} = #{@table}.#{x}" }.join(", ")
     sql = %{
       UPDATE #{@temp_table} INNER JOIN #{@table}
         ON #{@temp_table}.id = #{@table}.id
         SET #{columns}
       WHERE #{@table}.updated_at >= '#{1.day.ago.strftime("%Y-%m-%d")}'
     }
-    puts sql
+    @conn.execute(sql)
+    # puts sql
   end
   
   def switch
     final_sync
-    puts to_old   = %Q{RENAME TABLE #{@table} TO #{@trash_table}}
-    puts from_rename = %Q{RENAME TABLE #{@temp_table} TO #{@table}}
+    to_trash  = %Q{RENAME TABLE #{@table} TO #{@trash_table}}
+    from_temp = %Q{RENAME TABLE #{@temp_table} TO #{@table}}
+    @conn.execute(to_trash)
+    @conn.execute(from_temp)
   end
   
   def cleanup
-    puts cleanup = %Q{DROP TABLE #{@trash_table}}
+    sql = %Q{DROP TABLE #{@trash_table}}
+    @conn.execute(sql)
   end
   
   # returns Array of record ids
@@ -122,19 +142,24 @@ class SchemaChanger
     end
   end
   
+  def define_model(table)
+    # Object.const_set(table.classify, Class.new(ActiveRecord::Base))
+    Object.class_eval(<<-code)
+      class #{table.classify} < ActiveRecord::Base
+        set_table_name "#{table}"
+      end
+    code
+    table.classify.constantize # returns the constant
+  end
+
 private
   def ask(msg)
     puts msg
   end
 
-  def parse_action
-    action = gets(:action).downcase
+  def extract_default(col)
+    @conn.quote(col.default)
   end
   
-  # raw: teaser_lock tinyint(1) DEFAULT '0'
-  def parse_mod
-    column = gets(:mod)
-  end
-
 end
 

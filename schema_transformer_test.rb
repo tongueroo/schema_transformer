@@ -5,18 +5,21 @@ ENV['RAILS_ENV'] = 'test'
 require 'rubygems'
 require 'test/unit'
 require 'pp'
-require "schema_changer"
+require "schema_transformer"
 
 # open to mock out methods
-class SchemaChanger
+class SchemaTransformer
+  def ask(msg)
+    nil
+  end
   def gets(name = nil)
     case name
     when :table
       "users"
-    when :action
-      "add_column"
     when :mod
-      "ADD COLUMN teaser_lock tinyint(1) DEFAULT '0'"
+      "ADD COLUMN active tinyint(1) DEFAULT '0', 
+       ADD COLUMN title varchar(255) DEFAULT 'Mr', 
+       DROP COLUMN about_me"
     else
       raise "gets method: need to mock out #{name}"
     end
@@ -24,9 +27,10 @@ class SchemaChanger
 end
 
 def setup_fixtures
-  ActiveRecord::Base.connection.drop_table(:users_schema_temp, :force => true) rescue nil
+  ActiveRecord::Base.connection.drop_table(:users_st_temp, :force => true) rescue nil
   ActiveRecord::Base.connection.create_table :users, :force => true do |table|
     table.column :name, :string
+    table.column :about_me, :string
     table.column :updated_at, :datetime
     table.column :created_at, :datetime
   end
@@ -38,9 +42,10 @@ def setup_fixtures
   Object.send(:remove_const, "User") rescue nil
 end
 
-class SchemaChangerTest < Test::Unit::TestCase
+class SchemaTransformerTest < Test::Unit::TestCase
   def setup
-    @changer = SchemaChanger.new
+    @changer = SchemaTransformer.new
+    @conn = ActiveRecord::Base.connection
     setup_fixtures
   end
 
@@ -71,10 +76,23 @@ class SchemaChangerTest < Test::Unit::TestCase
   # end
 
   def test_all
-    @changer.run
+    @changer.gather_info
+    
+    assert_equal ["users"], @conn.tables
     @changer.create
+    assert_equal ["users", "users_st_temp"], @conn.tables
+    
+    assert_equal 0, UsersStTemp.count
     @changer.sync
+    assert_equal User.count, UsersStTemp.count
+    
+    assert_equal ["users", "users_st_temp"], @conn.tables
     @changer.switch
+    assert_equal ["users", "users_st_trash"], @conn.tables
+    
     @changer.cleanup
+    assert_equal ["users"], @conn.tables
   end
+  
+  # TODO: test for tables that dont follon convenstion of pluralization: UserInfo
 end

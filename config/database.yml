@@ -30,4 +30,4 @@ development:
 
 test:
   <<: *common
-  database: schema_changer_test
+  database: schema_transformer_test
