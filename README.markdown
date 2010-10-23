@@ -11,7 +11,7 @@ Second, you run 2 commands on production.
 
 The first command will create a 'temporary' table with the altered schema and incrementally copy the data over until it is close to synced.  You can run this command as many times as you want as it want - it work hurt.  This first command is slow as it takes a while to copy the data over, especially if you have a really large tables that are several GBs in size.
 
-The second command will do a switheroo with with 'temporarily' new table and the current table.  It will then remove the obsoleted table with the old schema structure.  Because it is doing a rename (which can screw up replication on a heavily traffic site), this second command should be ran with maintenance page up.  This second command is fast because it doe a final incremental sync and quickly switches the new table into place.
+The second command will do a switheroo with with 'temporarily' new table and the current table.  It will then remove the obsoleted table with the old schema structure.  Because it is doing a rename (which can screw up replication on a heavily traffic site), this second command should be ran with maintenance page up.  This second command is fast because it does a final incremental sync and quickly switches the new table into place.
 
 Install
 -------
@@ -37,7 +37,6 @@ Examples 2:
 Examples 3: 
   ADD COLUMN smart tinyint(1) DEFAULT '0', DROP COLUMN full_name
 > ADD COLUMN special tinyint(1) DEFAULT '0'
-        ss
 *** Thanks ***
 Schema transform definitions have been generated and saved to: 
   config/schema_transformations/tags.json
