@@ -4,6 +4,7 @@ module SchemaTransformer
       case action
       when :generate
         out =<<-HELP
+        ss
 *** Thanks ***
 Schema transform definitions have been generated and saved to: 
   config/schema_transformations/#{self.table}.json
@@ -16,6 +17,10 @@ $ schema_transformer sync #{self.table}   # can be ran over and over, it will ju
 $ schema_transformer switch #{self.table} # should be done with a maintenance page up, switches the tables
 *** Thank you ***
 HELP
+      when :sync_progress
+        out =<<-TEXT
+Creating temp table and syncing the data... (tail log/schema_transformer.log for status)
+TEXT
       when :sync
         out =<<-TEXT
 *** Thanks ***

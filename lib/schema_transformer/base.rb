@@ -31,6 +31,7 @@ module SchemaTransformer
         self.generate
         help(:generate)
       when "sync"
+        help(:sync_progress)
         table = options[:action][1]
         self.gather_info(table)
         self.create
@@ -55,16 +56,17 @@ module SchemaTransformer
       ask <<-TXT
 What is the modification to the table?
 Examples 1: 
-  ADD COLUMN teaser_lock tinyint(1) DEFAULT '0'
+  ADD COLUMN smart tinyint(1) DEFAULT '0'
 Examples 2: 
-  ADD INDEX slide_id (slide_id)
+  ADD INDEX idx_name (name)
 Examples 3: 
-  ADD COLUMN teaser_lock tinyint(1) DEFAULT '0', DROP COLUMN name
+  ADD COLUMN smart tinyint(1) DEFAULT '0', DROP COLUMN full_name
 TXT
       data[:mod] = gets(:mod)
       path = transform_file(data[:table])
       FileUtils.mkdir(File.dirname(path)) unless File.exist?(File.dirname(path))
       File.open(path,"w") { |f| f << data.to_json }
+      @table = data[:table]
       data
     end
     
@@ -112,7 +114,7 @@ TXT
         # puts sql
         @conn.execute(sql)
         
-        if @@stagger >= 0
+        if @@stagger > 0
           log("Staggering: delaying for #{@@stagger} seconds before next batch insert")
           sleep(@@stagger)
         end
@@ -124,7 +126,7 @@ TXT
       reset_column_info
       
       sync
-      columns = subset_columns.collect{|x| "#{@temp_table}.#{x} = #{@table}.#{x}" }.join(", ")
+      columns = subset_columns.collect{|x| "#{@temp_table}.`#{x}` = #{@table}.`#{x}`" }.join(", ")
       # need to limit the final sync, if we do the entire table it takes a long time
       limit_cond = get_limit_cond
       sql = %{
@@ -182,10 +184,10 @@ TXT
       added_s = @temp_model.column_names - @model.column_names
       added = @temp_model.columns.
                 select{|c| added_s.include?(c.name) }.
-                collect{|c| "#{extract_default(c)} AS #{c.name}" }
+                collect{|c| "#{extract_default(c)} AS `#{c.name}`" }
     
       # combine both
-      columns = subset + added
+      columns = subset.collect{|x| "`#{x}`"} + added
       sql = columns.join(", ")
     end
   

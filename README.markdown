@@ -26,25 +26,42 @@ Usage
 Generate the schema transform definitions:
 
 <pre>
-tung $ schema_transformer generate
+tung@walle $ schema_transformer generate
 What is the name of the table you want to alter?
-> users
+> tags
 What is the modification to the table?
 Examples 1: 
-  ADD COLUMN teaser_lock tinyint(1) DEFAULT '0'
+  ADD COLUMN smart tinyint(1) DEFAULT '0'
 Examples 2: 
-  ADD INDEX slide_id (slide_id)
+  ADD INDEX idx_name (name)
 Examples 3: 
-  ADD COLUMN teaser_lock tinyint(1) DEFAULT '0', DROP COLUMN name
-> ADD COLUMN teaser_lock tinyint(1) DEFAULT '0'
+  ADD COLUMN smart tinyint(1) DEFAULT '0', DROP COLUMN full_name
+> ADD COLUMN dumb tinyint(1) DEFAULT '0'
+        ss
 *** Thanks ***
-schema transform definitions generated and have been saved to: config/schema_transformations/users.json
-Next you need to run 2 commands to alter the database.  As explained in the README, the first can be ran with the site still up.  The second command should be done with a maintenance page up.
-Here are the 2 commands:
-$ schema_transformer sync users  # can be ran over and over, it will just keep syncing the data
-$ schema_transformer switch users # should be done with a maintenance page up
+Schema transform definitions have been generated and saved to: 
+  config/schema_transformations/tags.json
+Next you need to run 2 commands to alter the database.  As explained in the README, the first 
+can be ran with the site still up.  The second command should be done with a maintenance page up.
+
+Here are the 2 commands you'll need to run later after checking in the tags.json file
+into your version control system:
+$ schema_transformer sync tags   # can be ran over and over, it will just keep syncing the data
+$ schema_transformer switch tags # should be done with a maintenance page up, switches the tables
 *** Thank you ***
-tung $ 
+tung@walle $ schema_transformer sync tags
+Creating temp table and syncing the data... (tail log/schema_transformer.log for status)
+*** Thanks ***
+There is now a tags_st_temp table with the new table schema and the data has been synced.
+Please run the next command after you put a maintenance page up:
+$ schema_transformer switch tags
+tung@walle $ schema_transformer switch tags
+*** Thanks ***
+The final sync ran and the table tags has been updated with the new schema.  
+Get rid of that maintenance page and re-enable your site.
+Thank you.  Have a very nice day.
+tung@walle $ 
+</pre>
 
 FAQ
 -------
