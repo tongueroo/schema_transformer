@@ -6,14 +6,14 @@ module SchemaTransformer
         out =<<-HELP
 *** Thanks ***
 Schema transform definitions have been generated and saved to: 
-  config/schema_transformations/#{data[:table]}.json
+  config/schema_transformations/#{self.table}.json
 Next you need to run 2 commands to alter the database.  As explained in the README, the first 
 can be ran with the site still up.  The second command should be done with a maintenance page up.
 
-Here are the 2 commands you'll need to run later after checking in the #{data[:table]}.json file
+Here are the 2 commands you'll need to run later after checking in the #{self.table}.json file
 into your version control system:
-$ schema_transformer sync #{data[:table]}   # can be ran over and over, it will just keep syncing the data
-$ schema_transformer switch #{data[:table]} # should be done with a maintenance page up, switches the tables
+$ schema_transformer sync #{self.table}   # can be ran over and over, it will just keep syncing the data
+$ schema_transformer switch #{self.table} # should be done with a maintenance page up, switches the tables
 *** Thank you ***
 HELP
       when :sync
