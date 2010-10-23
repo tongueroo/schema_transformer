@@ -40,7 +40,6 @@ module SchemaTransformer
       when "switch"
         table = options[:action][1]
         self.gather_info(table)
-        self.final_sync
         self.switch
         self.cleanup
         help(:switch)

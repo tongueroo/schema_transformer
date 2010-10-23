@@ -36,7 +36,7 @@ Examples 2:
   ADD INDEX idx_name (name)
 Examples 3: 
   ADD COLUMN smart tinyint(1) DEFAULT '0', DROP COLUMN full_name
-> ADD COLUMN dumb tinyint(1) DEFAULT '0'
+> ADD COLUMN special tinyint(1) DEFAULT '0'
         ss
 *** Thanks ***
 Schema transform definitions have been generated and saved to: 
