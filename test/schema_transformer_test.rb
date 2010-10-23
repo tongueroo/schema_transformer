@@ -8,6 +8,7 @@ require 'pp'
 require File.expand_path("../../lib/schema_transformer", __FILE__)
 
 # open to mock out methods
+$testing_books = false # im being lazy, should use mocks
 module SchemaTransformer
   class Base
     def ask(msg)
@@ -16,14 +17,23 @@ module SchemaTransformer
     def gets(name = nil)
       case name
       when :table
-        "users"
+        if $testing_books
+          out = "books"
+        else
+          out = "users"
+        end
       when :mod
-        "ADD COLUMN active tinyint(1) DEFAULT '0', 
-         ADD COLUMN title varchar(255) DEFAULT 'Mr', 
-         DROP COLUMN about_me"
+        if $testing_books
+          out = "ADD COLUMN active tinyint(1) DEFAULT '0'"
+        else
+          out = "ADD COLUMN active tinyint(1) DEFAULT '0', 
+           ADD COLUMN title varchar(255) DEFAULT 'Mr', 
+           DROP COLUMN about_me"
+        end
       else
         raise "gets method: need to mock out #{name}"
       end
+      out
     end
     def help(msg)
       nil
@@ -33,6 +43,7 @@ end
 
 def setup_fixtures
   ActiveRecord::Base.connection.drop_table(:users_st_temp, :force => true) rescue nil
+  ActiveRecord::Base.connection.drop_table(:users_st_trash, :force => true) rescue nil
   ActiveRecord::Base.connection.create_table :users, :force => true do |table|
     table.column :name, :string
     table.column :about_me, :string
@@ -45,6 +56,20 @@ def setup_fixtures
     User.create(:name => "name_#{i}")
   end
   Object.send(:remove_const, "User") rescue nil
+
+  ActiveRecord::Base.connection.drop_table(:books_st_temp, :force => true) rescue nil
+  ActiveRecord::Base.connection.drop_table(:books_st_trash, :force => true) rescue nil
+  # no timestamp
+  ActiveRecord::Base.connection.create_table :books, :force => true do |table|
+    table.column :title, :string
+    table.column :author, :string
+  end
+  Object.send(:remove_const, "Book") rescue nil
+  Object.const_set("Book", Class.new(ActiveRecord::Base))
+  4.times do |i|
+    Book.create(:title => "title_#{i}")
+  end
+  Object.send(:remove_const, "Book") rescue nil
 end
 
 class SchemaTransformerTest < Test::Unit::TestCase
@@ -58,9 +83,38 @@ class SchemaTransformerTest < Test::Unit::TestCase
     @base = File.expand_path("../fake_app", __FILE__)
     @transform_file = @base+"/config/schema_transformations/users.json"
     File.delete(@transform_file) if File.exist?(@transform_file)
-    @transformer = SchemaTransformer::Base.new(@base, :batch_size => 10)
+    @transformer = SchemaTransformer::Base.new(@base, :batch_size => 10, :stagger => 0)
     @conn = ActiveRecord::Base.connection
     setup_fixtures
+  end
+  
+  def test_no_updated_at_no_data
+    @conn.execute("delete from books")
+    $testing_books = true
+    @transformer.generate
+    @transformer.gather_info("books")
+  
+    assert @conn.tables.include?("books")
+    assert !@conn.tables.include?("books_st_temp")
+    @transformer.create
+    assert @conn.tables.include?("books_st_temp")
+
+    @transformer.final_sync
+    $testing_books = false
+  end
+
+  def test_no_updated_at_with_data
+    $testing_books = true
+    @transformer.generate
+    @transformer.gather_info("books")
+  
+    assert @conn.tables.include?("books")
+    assert !@conn.tables.include?("books_st_temp")
+    @transformer.create
+    assert @conn.tables.include?("books_st_temp")
+
+    @transformer.final_sync
+    $testing_books = false
   end
 
   def test_find_in_batches
@@ -97,7 +151,7 @@ class SchemaTransformerTest < Test::Unit::TestCase
     SchemaTransformer::Base.run(:base => @base, :action => ["sync", "users"])
     assert_equal c1, count("users_st_temp")
   end
-
+  
   def test_run_switch_black_box
     @transformer.generate
     c1 = count("users")
@@ -106,7 +160,7 @@ class SchemaTransformerTest < Test::Unit::TestCase
     assert_equal c1, c2
     @conn.execute("delete from users_st_temp order by id desc limit 10")
     assert_equal c1, count("users_st_temp") + 10
-
+  
     # This is what Im testing
     col1 = User.columns.size
     SchemaTransformer::Base.run(:base => @base, :action => ["switch", "users"])
@@ -114,25 +168,29 @@ class SchemaTransformerTest < Test::Unit::TestCase
     assert_equal col1 + 1, User.columns.size
     assert_equal c1, count("users") # this is the new table
   end
-
+  
   def test_run_tranformations_white_box
     @transformer.generate
     @transformer.gather_info("users")
     
-    assert_equal ["users"], @conn.tables
+    assert @conn.tables.include?("users")
+    assert !@conn.tables.include?("users_st_temp")
     @transformer.create
-    assert_equal ["users", "users_st_temp"], @conn.tables
+    assert @conn.tables.include?("users_st_temp")
     
     assert_equal 0, UsersStTemp.count
     @transformer.sync
     assert_equal User.count, UsersStTemp.count
     
-    assert_equal ["users", "users_st_temp"], @conn.tables
+    assert @conn.tables.include?("users")
     @transformer.switch
-    assert_equal ["users", "users_st_trash"], @conn.tables
+    assert @conn.tables.include?("users_st_trash")
+    assert !@conn.tables.include?("users_st_temp")
     
     @transformer.cleanup
-    assert_equal ["users"], @conn.tables
+    assert @conn.tables.include?("users")
+    assert !@conn.tables.include?("users_st_trash")
+    assert !@conn.tables.include?("users_st_temp")
   end
   
   def test_generate_transformations
@@ -148,3 +206,5 @@ class SchemaTransformerTest < Test::Unit::TestCase
     assert_match /ADD COLUMN/, @transformer.instance_variable_get(:@mod)
   end
 end
+
+

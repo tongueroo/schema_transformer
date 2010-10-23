@@ -3,6 +3,7 @@ module SchemaTransformer
   
   class Base
     include Help
+    @@stagger = 0
     def self.run(options)
       @@stagger = options[:stagger] || 0
       @transformer = SchemaTransformer::Base.new(options[:base] || Dir.pwd)
@@ -28,20 +29,20 @@ module SchemaTransformer
       case @action
       when "generate"
         self.generate
-        puts help(:generate)
+        help(:generate)
       when "sync"
         table = options[:action][1]
         self.gather_info(table)
         self.create
         self.sync
-        puts help(:sync)
+        help(:sync)
       when "switch"
         table = options[:action][1]
         self.gather_info(table)
         self.final_sync
         self.switch
         self.cleanup
-        puts help(:switch)
+        help(:switch)
       else
         raise UsageError, "Invalid action #{@action}"
       end
@@ -124,12 +125,15 @@ TXT
       
       sync
       columns = subset_columns.collect{|x| "#{@temp_table}.#{x} = #{@table}.#{x}" }.join(", ")
+      # need to limit the final sync, if we do the entire table it takes a long time
+      limit_cond = get_limit_cond
       sql = %{
         UPDATE #{@temp_table} INNER JOIN #{@table}
           ON #{@temp_table}.id = #{@table}.id
           SET #{columns}
-        WHERE #{@table}.updated_at >= '#{1.day.ago.strftime("%Y-%m-%d")}'
+        WHERE #{limit_cond}
       }
+      # puts sql
       @conn.execute(sql)
     end
   
@@ -144,6 +148,20 @@ TXT
     def cleanup
       sql = %Q{DROP TABLE #{@trash_table}}
       @conn.execute(sql)
+    end
+    
+    def get_limit_cond
+      if @model.column_names.include?("updated_at")
+        "#{@table}.updated_at >= '#{1.day.ago.strftime("%Y-%m-%d")}'"
+      else
+        sql = "select id from #{@table} order by id desc limit 100000"
+        resp = @conn.execute(sql)
+        bound = 0
+        while row = resp.fetch_row do
+          bound = row[0].to_i
+        end
+        "#{@table}.id >= #{bound}"
+      end
     end
   
     # the parameter is only for testing

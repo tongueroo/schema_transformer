@@ -8,3 +8,4 @@
 * TODO: 
 * add support for tables without updated_at timestamp
 * updated_at if its available and use a real time vs some guess
+* clean up spec: use real mocks, get rid of $testing_books

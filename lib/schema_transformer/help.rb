@@ -31,6 +31,7 @@ Get rid of that maintenance page and re-enable your site.
 Thank you.  Have a very nice day.
 TEXT
       end
+      puts out
     end
     
   end

@@ -54,7 +54,12 @@ A: I've only tested with adding columns and removing columns.
 Q: Can I add and drop multiple columns and indexes at the same time?
 A: Yes.
 
-Note
+Cautionary Notes
 -------
+For speed reasons he final sync is done by using the updated_at timestamp if available and syncing 
+the data last updated since the last day.  Data before that will not get synced in the final sync.
+So, having an updated_at timestamp and using it on the original table is very important.
 
-Right this only supports tables that has an updated_at timestamp
+For tables that do not have updated_at timestamps.  I need to still limit the size of the final update
+so I'm limiting it to the last 100_000 records.  Not much at all, so it is very important to have that 
+updated_at timestamp.
