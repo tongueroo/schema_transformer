@@ -1,45 +1,109 @@
 module SchemaTransformer
+  class UsageError < RuntimeError
+  end
+  
   class Base
+    def self.run(options)
+      @transformer = SchemaTransformer::Base.new(options[:base] || Dir.pwd)
+      @transformer.run(options)
+    end
+    
+    attr_reader :options
     def initialize(base = File.expand_path("..", __FILE__), options = {})
+      @base = base
       @db, @log, @mail = ActiveWrapper.setup(
-        :base => base,
+        :base => @base,
         :env => ENV['RAILS_ENV'] || 'development',
         :log => "schema_transformer"
       )
       @db.establish_connection
       @conn = ActiveRecord::Base.connection
-    
+
       @batch_size = options[:batch_size] || 10_000
     end
-  
-    def gather_info
+    
+    def run(options)
+      case options[:action].first
+      when "generate"
+        self.generate
+      when "sync"
+        table = options[:action][1]
+        self.gather_info(table)
+        self.create
+        self.sync
+      when "switch"
+        table = options[:action][1]
+        self.gather_info(table)
+        self.final_sync
+        self.switch
+        self.cleanup
+      else
+        raise UsageError, "Invalid action"
+      end
+    end
+    
+    def generate
+      data = {}
       ask "What is the name of the table you want to alter?"
-      @table = gets(:table)
+      data[:table] = gets(:table)
+      ask <<-TXT
+What is the modification to the table?
+Examples 1: 
+  ADD COLUMN teaser_lock tinyint(1) DEFAULT '0'
+Examples 2: 
+  ADD INDEX slide_id (slide_id)
+Examples 3: 
+  ADD COLUMN teaser_lock tinyint(1) DEFAULT '0', DROP COLUMN name
+TXT
+      data[:mod] = gets(:mod)
+      path = transform_file(data[:table])
+      FileUtils.mkdir(File.dirname(path)) unless File.exist?(File.dirname(path))
+      File.open(path,"w") { |f| f << data.to_json }
+      help <<-HELP
+*** Thanks ***
+Schema transform definitions have been generated and saved to: 
+  config/schema_transformations/#{data[:table]}.json
+Next you need to run 2 commands to alter the database.  As explained in the README, the first 
+can be ran with the site still up.  The second command should be done with a maintenance page up.
+
+Here are the 2 commands you'll need to run later after checking in the #{data[:table]}.json file
+into your version control system:
+$ schema_transformer sync #{data[:table]}   # can be ran over and over, it will just keep syncing the data
+$ schema_transformer switch #{data[:table]} # should be done with a maintenance page up, switches the tables
+*** Thank you ***
+HELP
+      data
+    end
+    
+    def gather_info(table)
+      if table.nil?
+        raise UsageError, "You need to specific the table name."
+      end
+      data = JSON.parse(IO.read(transform_file(table)))
+      @table = data["table"]
+      @mod = data["mod"]
+      # variables need for rest of the program
       @temp_table = "#{@table}_st_temp"
       @trash_table = "#{@table}_st_trash"
-
       @model = define_model(@table)
-      ask "What is the modification to the table?"
-      ask "Examples: ADD COLUMN teaser_lock tinyint(1) DEFAULT '0'"
-      ask "          ADD INDEX slide_id (slide_id)"
-      @mod = gets(:mod)
-      @sql = {}
     end
   
     def create
-      sql_create = %{CREATE TABLE #{@temp_table} LIKE #{@table}}
-      sql_mod = %{ALTER TABLE #{@temp_table} #{@mod}}
-      @conn.execute(sql_create)
-      @conn.execute(sql_mod)
-      @temp_model = define_model(@temp_table)
-      @model.reset_column_information
-      @temp_model.reset_column_information
-      # puts @temp_model
+      if self.temp_table_exists?
+        @temp_model = define_model(@temp_table)
+      else
+        sql_create = %{CREATE TABLE #{@temp_table} LIKE #{@table}}
+        sql_mod = %{ALTER TABLE #{@temp_table} #{@mod}}
+        @conn.execute(sql_create)
+        @conn.execute(sql_mod)
+        @temp_model = define_model(@temp_table)
+      end
+      reset_column_info
     end
-  
+    
     def sync
-      start = res = @conn.execute("SELECT max(id) AS max_id FROM `#{@temp_table}`")
-      start = res.fetch_row[0].to_i + 1 # nil case is okay: [nil][0].to_i => nil 
+      res = @conn.execute("SELECT max(id) AS max_id FROM `#{@temp_table}`")
+      start = res.fetch_row[0].to_i + 1 # nil case is okay: [nil][0].to_i => 0
       find_in_batches("users", :start => start, :batch_size => @batch_size) do |batch|
         # puts "batch #{batch.inspect}"
         lower = batch.first
@@ -58,6 +122,9 @@ module SchemaTransformer
     end
   
     def final_sync
+      @temp_model = define_model(@temp_table)
+      reset_column_info
+      
       sync
       columns = subset_columns.collect{|x| "#{@temp_table}.#{x} = #{@table}.#{x}" }.join(", ")
       sql = %{
@@ -67,7 +134,6 @@ module SchemaTransformer
         WHERE #{@table}.updated_at >= '#{1.day.ago.strftime("%Y-%m-%d")}'
       }
       @conn.execute(sql)
-      # puts sql
     end
   
     def switch
@@ -147,8 +213,26 @@ module SchemaTransformer
       table.classify.constantize # returns the constant
     end
 
+    def transform_file(table)
+      @base+"/config/schema_transformations/#{table}.json"
+    end
+  
+    def temp_table_exists?
+      @conn.table_exists?(@temp_table)
+    end
+    
+    def reset_column_info
+      @model.reset_column_information
+      @temp_model.reset_column_information
+    end
+    
   private
     def ask(msg)
+      puts msg
+      print "> "
+    end
+    
+    def help(msg)
       puts msg
     end
 

@@ -27,9 +27,10 @@ module SchemaTransformer
     def option_parser
       # @logger = Logger.new
       @option_parser ||= OptionParser.new do |opts|
-        opts.banner = "Usage: #{File.basename($0)} [options] action ..."
+        opts.banner = "Usage: #{File.basename($0)} [options] [action]"
         
         opts.on("-h", "--help", "Display this help message.") do
+          puts help_message
           puts opts
           exit
         end
@@ -61,7 +62,7 @@ module SchemaTransformer
       option_parser.parse!(args)
       extract_environment_variables!
       
-      options[:action] = args.first # ignore remaining
+      options[:action] = args # ignore remaining
     end
     
     # Extracts name=value pairs from the remaining command-line arguments
@@ -74,14 +75,18 @@ module SchemaTransformer
     end
     
     def run
-      puts "TODO FINISH LOGIC"
-      pp options
-      @transformer = SchemaTransformer::Base.new(Dir.pwd)
-      @transformer.gather_info
-      @transformer.create
-      @transformer.sync
-      @transformer.switch
-      @transformer.cleanup
+      begin
+        SchemaTransformer::Base.run(options)
+      rescue UsageError => e
+        puts "Invalid action: #{options[:action].first}"
+        puts help_message
+        puts option_parser
+      end
+    end
+    
+    private
+    def help_message
+      "Available actions: generate, sync, switch"
     end
   end
   
