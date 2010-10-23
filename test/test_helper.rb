@@ -8,40 +8,6 @@ require 'mocha'
 require 'pp'
 require File.expand_path("../../lib/schema_transformer", __FILE__)
 
-# open to mock out methods
-$testing_books = false # im being lazy, should use mocks
-module SchemaTransformer
-  class Base
-    def ask(msg)
-      nil
-    end
-    def gets(name = nil)
-      case name
-      when :table
-        if $testing_books
-          out = "books"
-        else
-          out = "users"
-        end
-      when :mod
-        if $testing_books
-          out = "ADD COLUMN active tinyint(1) DEFAULT '0'"
-        else
-          out = "ADD COLUMN active tinyint(1) DEFAULT '0', 
-           ADD COLUMN title varchar(255) DEFAULT 'Mr', 
-           DROP COLUMN about_me"
-        end
-      else
-        raise "gets method: need to mock out #{name}"
-      end
-      out
-    end
-    def help(msg)
-      nil
-    end
-  end
-end
-
 module TestExtensions
   def setup_fixtures
     @conn = ActiveRecord::Base.connection # shortcut to connection
@@ -78,10 +44,29 @@ module TestExtensions
     end
     Object.send(:remove_const, "Book") rescue nil
   end
+  
+  def setup_stubs
+    SchemaTransformer::Base.any_instance.stubs(:gets).with(:table).returns("users")
+    SchemaTransformer::Base.any_instance.stubs(:gets).with(:mod).returns(
+      "ADD COLUMN active tinyint(1) DEFAULT '0', 
+       ADD COLUMN title varchar(255) DEFAULT 'Mr', 
+       DROP COLUMN about_me"
+    )
+    SchemaTransformer::Base.any_instance.stubs(:ask).returns(nil)
+    SchemaTransformer::Base.any_instance.stubs(:help).returns(nil)
+  end
 
   def count(table)
     res = @conn.execute("SELECT count(*) AS c FROM #{table}")
     c = res.fetch_row[0].to_i # nil case is okay: [nil][0].to_i => 0
+  end
+  
+  def assert_table_exist(table)
+    assert @conn.tables.include?(table)
+  end
+
+  def assert_table_not_exist(table)
+    assert !@conn.tables.include?(table)
   end
 end
 

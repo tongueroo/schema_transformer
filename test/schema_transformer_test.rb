@@ -7,38 +7,44 @@ class SchemaTransformerTest < Test::Unit::TestCase
     @base = File.expand_path("../fake_app", __FILE__)
     @transformer = SchemaTransformer::Base.new(@base, :batch_size => 10, :stagger => 0)
     setup_fixtures
-
+    setup_stubs
+    
     @transform_file = @base+"/config/schema_transformations/users.json"
     File.delete(@transform_file) if File.exist?(@transform_file)
   end
   
   def test_no_updated_at_no_data
+    @transformer = SchemaTransformer::Base.new(@base, :batch_size => 10, :stagger => 0)
     @conn.execute("delete from books")
-    $testing_books = true
+
+    @transformer.expects(:gets).with(:table).returns("books")
+    @transformer.expects(:gets).with(:mod).returns("ADD COLUMN active tinyint(1) DEFAULT '0'")
+    
     @transformer.generate
     @transformer.gather_info("books")
   
-    assert @conn.tables.include?("books")
-    assert !@conn.tables.include?("books_st_temp")
+    assert_table_exist("books")
+    assert_table_not_exist("books_st_temp")
     @transformer.create
-    assert @conn.tables.include?("books_st_temp")
+    assert_table_exist("books_st_temp")
 
     @transformer.final_sync
-    $testing_books = false
   end
 
   def test_no_updated_at_with_data
-    $testing_books = true
+    @transformer = SchemaTransformer::Base.new(@base, :batch_size => 10, :stagger => 0)
+    @transformer.expects(:gets).with(:table).returns("books")
+    @transformer.expects(:gets).with(:mod).returns("ADD COLUMN active tinyint(1) DEFAULT '0'")
+    
     @transformer.generate
     @transformer.gather_info("books")
   
-    assert @conn.tables.include?("books")
-    assert !@conn.tables.include?("books_st_temp")
+    assert_table_exist("books")
+    assert_table_not_exist("books_st_temp")
     @transformer.create
-    assert @conn.tables.include?("books_st_temp")
+    assert_table_exist("books_st_temp")
 
     @transformer.final_sync
-    $testing_books = false
   end
 
   def test_find_in_batches
@@ -97,24 +103,24 @@ class SchemaTransformerTest < Test::Unit::TestCase
     @transformer.generate
     @transformer.gather_info("users")
     
-    assert @conn.tables.include?("users")
-    assert !@conn.tables.include?("users_st_temp")
+    assert_table_exist("users")
+    assert_table_not_exist("users_st_temp")
     @transformer.create
-    assert @conn.tables.include?("users_st_temp")
+    assert_table_exist("users_st_temp")
     
     assert_equal 0, UsersStTemp.count
     @transformer.sync
     assert_equal User.count, UsersStTemp.count
     
-    assert @conn.tables.include?("users")
+    assert_table_exist("users")
     @transformer.switch
-    assert @conn.tables.include?("users_st_trash")
-    assert !@conn.tables.include?("users_st_temp")
+    assert_table_exist("users_st_trash")
+    assert_table_not_exist("users_st_temp")
     
     @transformer.cleanup
-    assert @conn.tables.include?("users")
-    assert !@conn.tables.include?("users_st_trash")
-    assert !@conn.tables.include?("users_st_temp")
+    assert_table_exist("users")
+    assert_table_not_exist("users_st_trash")
+    assert_table_not_exist("users_st_temp")
   end
   
   def test_generate_transformations
