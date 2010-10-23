@@ -74,7 +74,7 @@ A: Yes.
 
 Cautionary Notes
 -------
-For speed reasons he final sync is done by using the updated_at timestamp if available and syncing 
+For speed reasons the final sync is done by using the updated_at timestamp if available and syncing 
 the data last updated since the last day.  Data before that will not get synced in the final sync.
 So, having an updated_at timestamp and using it on the original table is very important.
 

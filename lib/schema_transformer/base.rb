@@ -99,7 +99,7 @@ TXT
     def sync
       res = @conn.execute("SELECT max(id) AS max_id FROM `#{@temp_table}`")
       start = res.fetch_row[0].to_i + 1 # nil case is okay: [nil][0].to_i => 0
-      find_in_batches("users", :start => start, :batch_size => @batch_size) do |batch|
+      find_in_batches(@table, :start => start, :batch_size => @batch_size) do |batch|
         # puts "batch #{batch.inspect}"
         lower = batch.first
         upper = batch.last
