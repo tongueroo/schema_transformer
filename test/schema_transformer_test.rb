@@ -5,23 +5,25 @@ ENV['RAILS_ENV'] = 'test'
 require 'rubygems'
 require 'test/unit'
 require 'pp'
-require "schema_transformer"
+require File.expand_path("../../lib/schema_transformer", __FILE__)
 
 # open to mock out methods
-class SchemaTransformer
-  def ask(msg)
-    nil
-  end
-  def gets(name = nil)
-    case name
-    when :table
-      "users"
-    when :mod
-      "ADD COLUMN active tinyint(1) DEFAULT '0', 
-       ADD COLUMN title varchar(255) DEFAULT 'Mr', 
-       DROP COLUMN about_me"
-    else
-      raise "gets method: need to mock out #{name}"
+module SchemaTransformer
+  class Base
+    def ask(msg)
+      nil
+    end
+    def gets(name = nil)
+      case name
+      when :table
+        "users"
+      when :mod
+        "ADD COLUMN active tinyint(1) DEFAULT '0', 
+         ADD COLUMN title varchar(255) DEFAULT 'Mr', 
+         DROP COLUMN about_me"
+      else
+        raise "gets method: need to mock out #{name}"
+      end
     end
   end
 end
@@ -44,7 +46,7 @@ end
 
 class SchemaTransformerTest < Test::Unit::TestCase
   def setup
-    @changer = SchemaTransformer.new
+    @transformer = SchemaTransformer::Base.new(File.expand_path("../fake_app", __FILE__))
     @conn = ActiveRecord::Base.connection
     setup_fixtures
   end
@@ -52,7 +54,7 @@ class SchemaTransformerTest < Test::Unit::TestCase
   # def test_find_in_batches
   #   i = 0
   #   bounds = [[8, 17], [18, 27], [28,35]]
-  #   @changer.find_in_batches("users", :start => 8, :batch_size => 10) do |batch|
+  #   @transformer.find_in_batches("users", :start => 8, :batch_size => 10) do |batch|
   #     # puts "batch #{batch.inspect}"
   #     lower = batch.first
   #     upper = batch.last
@@ -64,35 +66,33 @@ class SchemaTransformerTest < Test::Unit::TestCase
   # end
   # 
   # def test_base_sync
-  #   @changer.run
-  #   @changer.create_rename
-  #   puts @changer.base_sync
+  #   @transformer.run
+  #   @transformer.create_rename
+  #   puts @transformer.base_sync
   # end
   # 
   # def test_final_sync
-  #   @changer.run
-  #   @changer.create_rename
-  #   puts @changer.final_sync
+  #   @transformer.run
+  #   @transformer.create_rename
+  #   puts @transformer.final_sync
   # end
 
   def test_all
-    @changer.gather_info
+    @transformer.gather_info
     
     assert_equal ["users"], @conn.tables
-    @changer.create
+    @transformer.create
     assert_equal ["users", "users_st_temp"], @conn.tables
     
     assert_equal 0, UsersStTemp.count
-    @changer.sync
+    @transformer.sync
     assert_equal User.count, UsersStTemp.count
     
     assert_equal ["users", "users_st_temp"], @conn.tables
-    @changer.switch
+    @transformer.switch
     assert_equal ["users", "users_st_trash"], @conn.tables
     
-    @changer.cleanup
+    @transformer.cleanup
     assert_equal ["users"], @conn.tables
   end
-  
-  # TODO: test for tables that dont follon convenstion of pluralization: UserInfo
 end
