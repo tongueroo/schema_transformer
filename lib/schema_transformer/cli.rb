@@ -34,11 +34,15 @@ module SchemaTransformer
           exit
         end
 
+        opts.on("-v", "--verbose",
+          "verbose mode"
+        ) { |value| options[:verbose] = true }
+        
         opts.on("-V", "--version",
           "Display the schema_transformer version, and exit."
         ) do
-          require 'schema_transformer/version'
-          puts "Schema Transformer v#{SchemaTransformer::Version}"
+          require File.expand_path("../version", __FILE__)
+          puts "Schema Transformer v#{SchemaTransformer::VERSION}"
           exit
         end
 
@@ -46,7 +50,7 @@ module SchemaTransformer
     end
     
     def parse_options!
-      @options = {:actions => []}
+      @options = {:action => nil}
       
       if args.empty?
         warn "Please specifiy an action to execute."
@@ -55,10 +59,9 @@ module SchemaTransformer
       end
       
       option_parser.parse!(args)
-      coerce_variable_types!
       extract_environment_variables!
       
-      options[:actions].concat(args)
+      options[:action] = args.first # ignore remaining
     end
     
     # Extracts name=value pairs from the remaining command-line arguments
@@ -69,10 +72,16 @@ module SchemaTransformer
         ENV[$1] = $2
       end
     end
-
+    
     def run
       puts "TODO FINISH LOGIC"
       pp options
+      @transformer = SchemaTransformer::Base.new(Dir.pwd)
+      @transformer.gather_info
+      @transformer.create
+      @transformer.sync
+      @transformer.switch
+      @transformer.cleanup
     end
   end
   

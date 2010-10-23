@@ -1,6 +1,6 @@
 module SchemaTransformer
   class Base
-    def initialize(base = File.expand_path("..", __FILE__))
+    def initialize(base = File.expand_path("..", __FILE__), options = {})
       @db, @log, @mail = ActiveWrapper.setup(
         :base => base,
         :env => ENV['RAILS_ENV'] || 'development',
@@ -9,7 +9,7 @@ module SchemaTransformer
       @db.establish_connection
       @conn = ActiveRecord::Base.connection
     
-      @batch_size = 10
+      @batch_size = options[:batch_size] || 10_000
     end
   
     def gather_info

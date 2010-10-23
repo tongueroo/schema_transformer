@@ -46,7 +46,9 @@ end
 
 class SchemaTransformerTest < Test::Unit::TestCase
   def setup
-    @transformer = SchemaTransformer::Base.new(File.expand_path("../fake_app", __FILE__))
+    @transformer = SchemaTransformer::Base.new(
+      File.expand_path("../fake_app", __FILE__), :batch_size => 10
+    )
     @conn = ActiveRecord::Base.connection
     setup_fixtures
   end

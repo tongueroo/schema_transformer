@@ -27,6 +27,7 @@ common: &common
 
 development:
   <<: *common
+  database: schema_transformer
 
 test:
   <<: *common
