@@ -1,14 +1,15 @@
 module SchemaTransformer
-  class UsageError < RuntimeError
-  end
+  class UsageError < RuntimeError; end
   
   class Base
+    include Help
     def self.run(options)
+      @@stagger = options[:stagger] || 0
       @transformer = SchemaTransformer::Base.new(options[:base] || Dir.pwd)
       @transformer.run(options)
     end
     
-    attr_reader :options
+    attr_reader :options, :temp_table, :table
     def initialize(base = File.expand_path("..", __FILE__), options = {})
       @base = base
       @db, @log, @mail = ActiveWrapper.setup(
@@ -23,22 +24,26 @@ module SchemaTransformer
     end
     
     def run(options)
-      case options[:action].first
+      @action = options[:action].first
+      case @action
       when "generate"
         self.generate
+        puts help(:generate)
       when "sync"
         table = options[:action][1]
         self.gather_info(table)
         self.create
         self.sync
+        puts help(:sync)
       when "switch"
         table = options[:action][1]
         self.gather_info(table)
         self.final_sync
         self.switch
         self.cleanup
+        puts help(:switch)
       else
-        raise UsageError, "Invalid action"
+        raise UsageError, "Invalid action #{@action}"
       end
     end
     
@@ -59,25 +64,12 @@ TXT
       path = transform_file(data[:table])
       FileUtils.mkdir(File.dirname(path)) unless File.exist?(File.dirname(path))
       File.open(path,"w") { |f| f << data.to_json }
-      help <<-HELP
-*** Thanks ***
-Schema transform definitions have been generated and saved to: 
-  config/schema_transformations/#{data[:table]}.json
-Next you need to run 2 commands to alter the database.  As explained in the README, the first 
-can be ran with the site still up.  The second command should be done with a maintenance page up.
-
-Here are the 2 commands you'll need to run later after checking in the #{data[:table]}.json file
-into your version control system:
-$ schema_transformer sync #{data[:table]}   # can be ran over and over, it will just keep syncing the data
-$ schema_transformer switch #{data[:table]} # should be done with a maintenance page up, switches the tables
-*** Thank you ***
-HELP
       data
     end
     
     def gather_info(table)
       if table.nil?
-        raise UsageError, "You need to specific the table name."
+        raise UsageError, "You need to specific the table name: schema_transformer #{@action} <table_name>"
       end
       data = JSON.parse(IO.read(transform_file(table)))
       @table = data["table"]
@@ -108,7 +100,7 @@ HELP
         # puts "batch #{batch.inspect}"
         lower = batch.first
         upper = batch.last
-      
+        
         columns = insert_columns_sql
         sql = %Q{
           INSERT INTO #{@temp_table} (
@@ -118,6 +110,11 @@ HELP
         }
         # puts sql
         @conn.execute(sql)
+        
+        if @@stagger >= 0
+          log("Staggering: delaying for #{@@stagger} seconds before next batch insert")
+          sleep(@@stagger)
+        end
       end
     end
   
@@ -226,16 +223,16 @@ HELP
       @temp_model.reset_column_information
     end
     
+    def log(msg)
+      @log.info(msg)
+    end
+    
   private
     def ask(msg)
       puts msg
       print "> "
     end
     
-    def help(msg)
-      puts msg
-    end
-
     def extract_default(col)
       @conn.quote(col.default)
     end

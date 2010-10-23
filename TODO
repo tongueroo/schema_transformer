@@ -5,8 +5,6 @@
 5. rename tables
 6. remove maintenance page
 
-
-
-will need some logic to handle different number of columns: insert ... select with 2 different table schemas.  the new columns will be NULL values. 
-
-# TODO: updated_at if its available and use a real time vs some guess
+* TODO: 
+* add support for tables without updated_at timestamp
+* updated_at if its available and use a real time vs some guess

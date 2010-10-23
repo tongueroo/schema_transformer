@@ -45,7 +45,7 @@ $ schema_transformer switch users # should be done with a maintenance page up
 *** Thank you ***
 tung $ 
 
-Usage
+FAQ
 -------
 
 Q: What table alteration are supported?  
@@ -53,3 +53,8 @@ A: I've only tested with adding columns and removing columns.
 
 Q: Can I add and drop multiple columns and indexes at the same time?
 A: Yes.
+
+Note
+-------
+
+Right this only supports tables that has an updated_at timestamp

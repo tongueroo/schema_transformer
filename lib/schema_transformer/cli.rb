@@ -36,8 +36,12 @@ module SchemaTransformer
         end
 
         opts.on("-v", "--verbose",
-          "verbose mode"
+          "Verbose mode"
         ) { |value| options[:verbose] = true }
+        
+        opts.on("-s", "--stagger",
+          "Number of seconds to wait inbetween each bulk insert. Default 0"
+        ) { |value| options[:stagger] = value }
         
         opts.on("-V", "--version",
           "Display the schema_transformer version, and exit."
@@ -55,6 +59,7 @@ module SchemaTransformer
       
       if args.empty?
         warn "Please specifiy an action to execute."
+        warn help_message
         warn option_parser
         exit 1
       end
@@ -78,7 +83,7 @@ module SchemaTransformer
       begin
         SchemaTransformer::Base.run(options)
       rescue UsageError => e
-        puts "Invalid action: #{options[:action].first}"
+        puts "Usage Error: #{e.message}"
         puts help_message
         puts option_parser
       end
