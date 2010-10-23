@@ -1,2 +1,3 @@
 *.log
 test/fake_app/config/schema_transformations/*
+pkg
