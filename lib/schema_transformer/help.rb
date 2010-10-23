@@ -4,7 +4,6 @@ module SchemaTransformer
       case action
       when :generate
         out =<<-HELP
-        ss
 *** Thanks ***
 Schema transform definitions have been generated and saved to: 
   config/schema_transformations/#{self.table}.json
