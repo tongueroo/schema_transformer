@@ -70,6 +70,17 @@ updated_at column, it is extremly important that the updated_at column is indexe
 "schema_transformer switch ..." command possibly could be slow.  Because of this, you should analyze your
 database schema for missing updated_at columns and indexes with the command "schema_transformer analyze".
 
+Example:
+<pre>
+tung@walle $ schema_transformer analyze
+Analyzing your database schema...
+There are no tables without the updated_at timestamp.  GOOD
+These tables do have an updated_at timestamp, but no index: 
+  users
+tung@walle $ 
+</pre>
+  
+
 FAQ
 -------
 
