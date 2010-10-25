@@ -147,12 +147,9 @@ TXT
       if @model.column_names.include?("updated_at")
         "#{@table}.updated_at >= '#{1.day.ago.strftime("%Y-%m-%d")}'"
       else
-        sql = "select id from #{@table} order by id desc limit 100000"
-        resp = @conn.execute(sql)
-        bound = 0
-        while row = resp.fetch_row do
-          bound = row[0].to_i
-        end
+        res = @conn.execute("SELECT max(id) AS max_id FROM `#{@table}`")
+        max = res.fetch_row[0].to_i + 1 # nil case is okay: [nil][0].to_i => 0
+        bound = max - 100_000 < 0 ? 0 : max
         "#{@table}.id >= #{bound}"
       end
     end

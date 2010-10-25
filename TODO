@@ -8,3 +8,4 @@
 * TODO: 
 * add logging again: schema_transformer.log
 * updated_at if its available and use a real time vs some guess
+* add acts_as_archive support
