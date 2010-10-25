@@ -8,4 +8,3 @@
 * TODO: 
 * add logging again: schema_transformer.log
 * updated_at if its available and use a real time vs some guess
-* clean up spec: use real mocks, get rid of $testing_books

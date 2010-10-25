@@ -62,6 +62,14 @@ Thank you.  Have a very nice day.
 tung@walle $ 
 </pre>
 
+It is strongly recommended that the tables that you are altering has updated_at timestamp columns 
+with indexes on them.  If the tables do not updated_at columns at all, then only the last 100,000 rows 
+get updated in the final sync in the "schema_transformer switch ..." command.  If the updated_at column 
+is available then the final sync will use it to update all the data.  However, because it uses the 
+updated_at column, it is extremly important that the updated_at column is indexed or the final 
+"schema_transformer switch ..." command possibly could be slow.  Because of this, you should analyze your
+database schema for missing updated_at columns and indexes with the command "schema_transformer analyze".
+
 FAQ
 -------
 

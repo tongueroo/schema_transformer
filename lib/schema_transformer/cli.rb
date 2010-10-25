@@ -1,8 +1,3 @@
-#!/usr/bin/env ruby
-
-require 'rubygems'
-require 'active_wrapper'
-
 module SchemaTransformer
   class CLI
     
@@ -80,18 +75,23 @@ module SchemaTransformer
     end
     
     def run
-      begin
-        SchemaTransformer::Base.run(options)
-      rescue UsageError => e
-        puts "Usage Error: #{e.message}"
-        puts help_message
-        puts option_parser
+      @action = options[:action].first
+      if @action == "analyze"
+        SchemaTransformer::Analyze.run(options)
+      else
+        begin
+          SchemaTransformer::Transform.run(options)
+        rescue UsageError => e
+          puts "Usage Error: #{e.message}"
+          puts help_message
+          puts option_parser
+        end
       end
     end
     
     private
     def help_message
-      "Available actions: generate, sync, switch"
+      "Available actions: analyze, generate, sync, switch"
     end
   end
   

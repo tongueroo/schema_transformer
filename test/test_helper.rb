@@ -46,14 +46,14 @@ module TestExtensions
   end
   
   def setup_stubs
-    SchemaTransformer::Base.any_instance.stubs(:gets).with(:table).returns("users")
-    SchemaTransformer::Base.any_instance.stubs(:gets).with(:mod).returns(
+    SchemaTransformer::Transform.any_instance.stubs(:gets).with(:table).returns("users")
+    SchemaTransformer::Transform.any_instance.stubs(:gets).with(:mod).returns(
       "ADD COLUMN active tinyint(1) DEFAULT '0', 
        ADD COLUMN title varchar(255) DEFAULT 'Mr', 
        DROP COLUMN about_me"
     )
-    SchemaTransformer::Base.any_instance.stubs(:ask).returns(nil)
-    SchemaTransformer::Base.any_instance.stubs(:help).returns(nil)
+    SchemaTransformer::Transform.any_instance.stubs(:ask).returns(nil)
+    SchemaTransformer::Transform.any_instance.stubs(:help).returns(nil)
   end
 
   def count(table)
