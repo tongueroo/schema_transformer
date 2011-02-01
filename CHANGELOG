@@ -1,0 +1,4 @@
+0.3.1
+
+* speed up get_limit_cond in case of missing updated_at timestamp when id is used
+* require 'optparse', some version of ruby do not auto require this

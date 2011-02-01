@@ -1,3 +1,5 @@
+require 'optparse'
+
 module SchemaTransformer
   class CLI
     
