@@ -36,7 +36,7 @@ module SchemaTransformer
           "Verbose mode"
         ) { |value| options[:verbose] = true }
         
-        opts.on("-s", "--stagger",
+        opts.on("-s", "--stagger [VALUE]",
           "Number of seconds to wait inbetween each bulk insert. Default 0"
         ) { |value| options[:stagger] = value }
         
