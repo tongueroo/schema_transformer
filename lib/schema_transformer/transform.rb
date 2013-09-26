@@ -5,7 +5,7 @@ module SchemaTransformer
     include Help
     @@stagger = 0
     def self.run(options)
-      @@stagger = options[:stagger] || 0
+      @@stagger = options[:stagger] ? options[:stagger].to_f : 0
       @transformer = SchemaTransformer::Transform.new(options[:base] || Dir.pwd)
       @transformer.run(options)
     end
