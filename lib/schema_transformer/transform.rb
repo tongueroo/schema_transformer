@@ -14,6 +14,17 @@ module SchemaTransformer
     def initialize(base = File.expand_path("..", __FILE__), options = {})
       super
       @batch_size = options[:batch_size] || 10_000
+      trap(:SIGHUP) { reload }
+    end
+
+    def reload
+      path = "stagger.txt"
+      if File.exist?(path)
+        @@stagger = File.read(path).strip.to_i
+        log "@@stagger reloaded with #{@@stagger}"
+      else
+        log "no stagger.txt file found, keeping @@stagger at #{@@stagger}"
+      end
     end
     
     def run(options)
